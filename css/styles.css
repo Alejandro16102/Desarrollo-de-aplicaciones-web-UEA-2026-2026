@@ -1,0 +1,134 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y ELEMENTOS BASE
+   ========================================================================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    background-color: #e5d9cf; /* Color chocolate base de tu código original */
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+}
+
+/* Encabezado Principal */
+.h1 {
+    background-color: aquamarine !important; /* Mantiene tu color aquamarine original */
+    color: rgb(19, 12, 3);
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Párrafos generales */
+p {
+    color: brown; /* Mantiene tu regla original de color café/marrón */
+}
+
+/* Alineación justificada de textos */
+.text-justify {
+    text-align: justify;
+}
+
+/* ==========================================================================
+   SELECTORES AVANZADOS Y PSEUDO-ELEMENTOS DE TU CÓDIGO
+   ========================================================================== */
+h1 + p { 
+    color: rgb(8, 3, 3); /* Primer párrafo justo después de un título h1 */
+}
+
+p::first-letter { 
+    font-size: 2em; /* Primera letra en estilo destacado de tus párrafos */
+    font-weight: bold;
+    color: #2b1810;
+}
+
+/* ==========================================================================
+   ESTRUCTURA DEL MENÚ: Colores específicos con :nth-child()
+   ========================================================================== */
+.navbar-nav li:nth-child(1) a { color: #cbd5e1 !important; } /* Inicio: Gris claro */
+.navbar-nav li:nth-child(2) a { color: #6d4c41 !important; } /* Quiénes Somos: Tono chocolate */
+.navbar-nav li:nth-child(3) a { color: #d4a373 !important; } /* Productos: Tono oro/cacao */
+.navbar-nav li:nth-child(4) a { color: #a3b18a !important; } /* Contacto: Tono verde oliva suave */
+
+/* Cambio de color al pasar el cursor (Hover) sobre los links del menú */
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   COMPONENTES PERSONALIZADOS (CSS3 + Bootstrap)
+   ========================================================================== */
+
+/* Botón café artesanal */
+.btn-brown {
+    background-color: #6d4c41;
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.btn-brown:hover {
+    background-color: #2b1810;
+    color: #ffffff;
+    transform: scale(1.02);
+}
+
+/* Estilos de botones para Redes Sociales */
+.btn-facebook { background-color: #3b5998; }
+.btn-instagram { background-color: #e1306c; }
+
+/* Tarjetas de productos con sombra y efectos visuales de animación */
+.custom-card {
+    border: 2px solid #6d4c41 !important;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(43, 24, 16, 0.2);
+}
+
+/* Sección Aside Lateral */
+.custom-aside {
+    background-color: #d4a373;
+    border-left: 5px solid #6d4c41;
+    color: #2b1810;
+}
+
+/* Imagen de banner */
+.main-banner {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES COMPLETA PARA DISEÑO RESPONSIVO (Sintaxis corregida)
+   ========================================================================== */
+
+/* Pantallas Pequeñas (Celulares hasta 600px) */
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue !important; /* Mantiene tu regla de fondo azul claro */
+        font-size: 12px;
+    }
+    .h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Pantallas Medianas (Tablets de 601px a 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        background-color: lightgreen !important; /* Mantiene tu regla de fondo verde claro */
+        font-size: 16px;
+    }
+}
+
+/* Pantallas Grandes (Computadoras desde 1025px en adelante) */
+@media (min-width: 1025px) {
+    body {
+        background-color: lightyellow !important; /* Mantiene tu regla de fondo amarillo claro */
+        font-size: 18px;
+    }
+}
